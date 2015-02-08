@@ -7,8 +7,12 @@ public class SuperMarketPlusPlus {
         for (Item item : items) {
             if ((!"Aged Brie".equals(item.getName())) && !"Backstage Passes".equals(item.getName())) {
                 if (item.getQuality() > 0) {
-                    if (!"Sulfuras".equals(item.getName())) {
-                        item.setQuality(item.getQuality() - 1);
+                    if (!"Organic Bananas".equals(item.getName())) {
+                        if (!"Sulfuras".equals(item.getName())) {
+                            item.setQuality(item.getQuality() - 1);
+                        }
+                    } else {
+                        item.setQuality(item.getQuality() - 2);
                     }
                 }
             } else {
