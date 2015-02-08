@@ -150,5 +150,34 @@ public class SuperMarketPlusPlusTest {
 		assertThat(chicken.getSellIn(), equalTo(-5));
 	}
 
+	@Test
+	public void testAgedBrieIncreaseInQualityAsItGetsOlder() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Aged Brie", 1, 4));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+		Item chicken = items.get(0);
+		assertThat(chicken.getName(), equalTo("Aged Brie"));
+		assertThat(chicken.getQuality(), equalTo(9));
+		assertThat(chicken.getSellIn(), equalTo(-2));
+	}
+
+	@Test
+	public void testSulfursQualityNeverChanges() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Sulfuras", 1, 4));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+		Item chicken = items.get(0);
+		assertThat(chicken.getName(), equalTo("Sulfuras"));
+		assertThat(chicken.getQuality(), equalTo(4));
+		assertThat(chicken.getSellIn(), equalTo(1));
+	}
 
 }
