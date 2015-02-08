@@ -18,12 +18,12 @@ public class SuperMarketPlusPlus {
         items.add(new Item("Backstage Passes", 15, 20));
         items.add(new Item("Ginger Cake", 3, 6));
 
-        updateQuality();
+        updateQuality(items);
     }
 
 
-    public static void updateQuality() {
-        for (Item item : items) {
+    public static void updateQuality(List<Item> items1) {
+        for (Item item : items1) {
             if ((!"Aged Brie".equals(item.getName())) && !"Backstage Passes".equals(item.getName())) {
                 if (item.getQuality() > 0) {
                     if (!"Sulfuras".equals(item.getName())) {
