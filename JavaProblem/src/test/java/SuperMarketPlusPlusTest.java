@@ -14,7 +14,7 @@ public class SuperMarketPlusPlusTest {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("Thermal Vest", 10, 20));
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		assertThat(items.get(0).getName(), equalTo("Thermal Vest"));
 		assertThat(items.get(0).getQuality(), equalTo(19));
@@ -26,7 +26,7 @@ public class SuperMarketPlusPlusTest {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("Aged Brie", 2, 0));
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		assertThat(items.get(0).getName(), equalTo("Aged Brie"));
 		assertThat(items.get(0).getQuality(), equalTo(1));
@@ -38,7 +38,7 @@ public class SuperMarketPlusPlusTest {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("Chicken", 5, 7));
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		assertThat(items.get(0).getName(), equalTo("Chicken"));
 		assertThat(items.get(0).getQuality(), equalTo(6));
@@ -50,7 +50,7 @@ public class SuperMarketPlusPlusTest {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("Sulfuras", 0, 80));
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		assertThat(items.get(0).getName(), equalTo("Sulfuras"));
 		assertThat(items.get(0).getQuality(), equalTo(80));
@@ -62,7 +62,7 @@ public class SuperMarketPlusPlusTest {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("Backstage Passes", 15, 20));
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		assertThat(items.get(0).getName(), equalTo("Backstage Passes"));
 		assertThat(items.get(0).getQuality(), equalTo(21));
@@ -74,7 +74,7 @@ public class SuperMarketPlusPlusTest {
 		List<Item> items = new ArrayList<>();
 		items.add(new Item("Ginger Cake", 3, 6));
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		assertThat(items.get(0).getName(), equalTo("Ginger Cake"));
 		assertThat(items.get(0).getQuality(), equalTo(5));
@@ -92,7 +92,7 @@ public class SuperMarketPlusPlusTest {
 		items.add(new Item("Ginger Cake", 3, 6));
 
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
-		SuperMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		Item itemThermalVest = items.get(0);
 		assertThat(itemThermalVest.getName(), equalTo("Thermal Vest"));
