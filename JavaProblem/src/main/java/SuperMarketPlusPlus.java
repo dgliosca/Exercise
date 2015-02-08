@@ -3,8 +3,8 @@ import java.util.List;
 
 public class SuperMarketPlusPlus {
 
-    public void updateQuality(List<Item> items1) {
-        for (Item item : items1) {
+    public void updateQuality(List<Item> items) {
+        for (Item item : items) {
             if ((!"Aged Brie".equals(item.getName())) && !"Backstage Passes".equals(item.getName())) {
                 if (item.getQuality() > 0) {
                     if (!"Sulfuras".equals(item.getName())) {
