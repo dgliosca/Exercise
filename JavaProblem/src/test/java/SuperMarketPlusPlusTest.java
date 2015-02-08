@@ -57,4 +57,18 @@ public class SuperMarketPlusPlusTest {
 		assertThat(items.get(0).getSellIn(), equalTo(0));
 	}
 
+	@Test
+	public void testBackStagePasses() {
+		List<Item> items = new ArrayList<Item>();
+		items.add(new Item("Backstage Passes", 15, 20));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		SuperMarketPlusPlus.updateQuality(items);
+
+		assertThat(items.get(0).getName(), equalTo("Backstage Passes"));
+		assertThat(items.get(0).getQuality(), equalTo(21));
+		assertThat(items.get(0).getSellIn(), equalTo(14));
+	}
+
+
+
 }
