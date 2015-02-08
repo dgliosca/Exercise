@@ -1,26 +1,7 @@
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class SuperMarketPlusPlus {
-
-    private static List<Item> items = null;
-
-    public static void main(String[] args) {
-
-        System.out.println("Starting Supermarket Plus Plus");
-
-        items = new ArrayList<Item>();
-        items.add(new Item("Thermal Vest", 10, 20));
-        items.add(new Item("Aged Brie", 2, 0));
-        items.add(new Item("Chicken", 5, 7));
-        items.add(new Item("Sulfuras", 0, 80));
-        items.add(new Item("Backstage Passes", 15, 20));
-        items.add(new Item("Ginger Cake", 3, 6));
-
-        updateQuality(items);
-    }
-
 
     public static void updateQuality(List<Item> items1) {
         for (Item item : items1) {
