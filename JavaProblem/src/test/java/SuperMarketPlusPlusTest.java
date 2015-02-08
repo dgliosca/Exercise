@@ -225,4 +225,22 @@ public class SuperMarketPlusPlusTest {
 		assertThat(backstagePasses.getSellIn(), equalTo(1));
 	}
 
+
+	@Test
+	public void testOrganicBananasDecreseTwiceAsFastAfterSellInDateLessThanZero() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Organic Bananas", 0, 20));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+		Item backstagePasses = items.get(0);
+		assertThat(backstagePasses.getName(), equalTo("Organic Bananas"));
+		assertThat(backstagePasses.getQuality(), equalTo(8));
+		assertThat(backstagePasses.getSellIn(), equalTo(-3));
+	}
+
+
+
 }
