@@ -242,5 +242,19 @@ public class SuperMarketPlusPlusTest {
 	}
 
 
+	@Test
+	public void testOrganicBananasQualityNeverLessThanZero() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Organic Bananas", 0, 1));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+		Item backstagePasses = items.get(0);
+		assertThat(backstagePasses.getName(), equalTo("Organic Bananas"));
+
+	}
+
 
 }
