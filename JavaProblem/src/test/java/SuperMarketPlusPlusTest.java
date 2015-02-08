@@ -16,9 +16,10 @@ public class SuperMarketPlusPlusTest {
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
 		superMarketPlusPlus.updateQuality(items);
 
-		assertThat(items.get(0).getName(), equalTo("Thermal Vest"));
-		assertThat(items.get(0).getQuality(), equalTo(19));
-		assertThat(items.get(0).getSellIn(), equalTo(9));
+		Item thermalVest = items.get(0);
+		assertThat(thermalVest.getName(), equalTo("Thermal Vest"));
+		assertThat(thermalVest.getQuality(), equalTo(19));
+		assertThat(thermalVest.getSellIn(), equalTo(9));
 	}
 
 	@Test
@@ -28,9 +29,10 @@ public class SuperMarketPlusPlusTest {
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
 		superMarketPlusPlus.updateQuality(items);
 
-		assertThat(items.get(0).getName(), equalTo("Aged Brie"));
-		assertThat(items.get(0).getQuality(), equalTo(1));
-		assertThat(items.get(0).getSellIn(), equalTo(1));
+		Item agedBrie = items.get(0);
+		assertThat(agedBrie.getName(), equalTo("Aged Brie"));
+		assertThat(agedBrie.getQuality(), equalTo(1));
+		assertThat(agedBrie.getSellIn(), equalTo(1));
 	}
 
 	@Test
@@ -40,9 +42,10 @@ public class SuperMarketPlusPlusTest {
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
 		superMarketPlusPlus.updateQuality(items);
 
-		assertThat(items.get(0).getName(), equalTo("Chicken"));
-		assertThat(items.get(0).getQuality(), equalTo(6));
-		assertThat(items.get(0).getSellIn(), equalTo(4));
+		Item chicken = items.get(0);
+		assertThat(chicken.getName(), equalTo("Chicken"));
+		assertThat(chicken.getQuality(), equalTo(6));
+		assertThat(chicken.getSellIn(), equalTo(4));
 	}
 
 	@Test
@@ -52,9 +55,10 @@ public class SuperMarketPlusPlusTest {
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
 		superMarketPlusPlus.updateQuality(items);
 
-		assertThat(items.get(0).getName(), equalTo("Sulfuras"));
-		assertThat(items.get(0).getQuality(), equalTo(80));
-		assertThat(items.get(0).getSellIn(), equalTo(0));
+		Item sulfuras = items.get(0);
+		assertThat(sulfuras.getName(), equalTo("Sulfuras"));
+		assertThat(sulfuras.getQuality(), equalTo(80));
+		assertThat(sulfuras.getSellIn(), equalTo(0));
 	}
 
 	@Test
@@ -64,9 +68,10 @@ public class SuperMarketPlusPlusTest {
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
 		superMarketPlusPlus.updateQuality(items);
 
-		assertThat(items.get(0).getName(), equalTo("Backstage Passes"));
-		assertThat(items.get(0).getQuality(), equalTo(21));
-		assertThat(items.get(0).getSellIn(), equalTo(14));
+		Item backstagePasses = items.get(0);
+		assertThat(backstagePasses.getName(), equalTo("Backstage Passes"));
+		assertThat(backstagePasses.getQuality(), equalTo(21));
+		assertThat(backstagePasses.getSellIn(), equalTo(14));
 	}
 
 	@Test
@@ -76,9 +81,10 @@ public class SuperMarketPlusPlusTest {
 		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
 		superMarketPlusPlus.updateQuality(items);
 
-		assertThat(items.get(0).getName(), equalTo("Ginger Cake"));
-		assertThat(items.get(0).getQuality(), equalTo(5));
-		assertThat(items.get(0).getSellIn(), equalTo(2));
+		Item gingerCake = items.get(0);
+		assertThat(gingerCake.getName(), equalTo("Ginger Cake"));
+		assertThat(gingerCake.getQuality(), equalTo(5));
+		assertThat(gingerCake.getSellIn(), equalTo(2));
 	}
 
 	@Test
