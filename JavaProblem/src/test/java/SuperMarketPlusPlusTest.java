@@ -180,4 +180,34 @@ public class SuperMarketPlusPlusTest {
 		assertThat(chicken.getSellIn(), equalTo(1));
 	}
 
+	@Test
+	public void testBackStagePassesLessThanTenDayButMoreThanFive() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Backstage Passes", 9, 10));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+		Item backstagePasses = items.get(0);
+		assertThat(backstagePasses.getName(), equalTo("Backstage Passes"));
+		assertThat(backstagePasses.getQuality(), equalTo(16));
+		assertThat(backstagePasses.getSellIn(), equalTo(6));
+	}
+
+	@Test
+	public void testBackStagePassesLessThanFiveDays() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Backstage Passes", 4, 10));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+		Item backstagePasses = items.get(0);
+		assertThat(backstagePasses.getName(), equalTo("Backstage Passes"));
+		assertThat(backstagePasses.getQuality(), equalTo(19));
+		assertThat(backstagePasses.getSellIn(), equalTo(1));
+	}
+
 }
