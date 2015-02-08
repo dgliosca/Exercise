@@ -45,4 +45,16 @@ public class SuperMarketPlusPlusTest {
 		assertThat(items.get(0).getSellIn(), equalTo(4));
 	}
 
+	@Test
+	public void testSulfuras() {
+		List<Item> items = new ArrayList<Item>();
+		items.add(new Item("Sulfuras", 0, 80));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		SuperMarketPlusPlus.updateQuality(items);
+
+		assertThat(items.get(0).getName(), equalTo("Sulfuras"));
+		assertThat(items.get(0).getQuality(), equalTo(80));
+		assertThat(items.get(0).getSellIn(), equalTo(0));
+	}
+
 }
