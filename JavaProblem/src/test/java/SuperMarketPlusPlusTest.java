@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertThat;
 
 
@@ -250,10 +251,12 @@ public class SuperMarketPlusPlusTest {
 		superMarketPlusPlus.updateQuality(items);
 		superMarketPlusPlus.updateQuality(items);
 		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
 
 		Item backstagePasses = items.get(0);
 		assertThat(backstagePasses.getName(), equalTo("Organic Bananas"));
-
+		assertThat(backstagePasses.getQuality(), greaterThan(0));
+		assertThat(backstagePasses.getSellIn(), equalTo(-4));
 	}
 
 

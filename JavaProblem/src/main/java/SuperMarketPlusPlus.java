@@ -12,7 +12,9 @@ public class SuperMarketPlusPlus {
                             item.setQuality(item.getQuality() - 1);
                         }
                     } else {
-                        item.setQuality(item.getQuality() - 2);
+                        if (item.getQuality() >= 2) {
+                            item.setQuality(item.getQuality() - 2);
+                        }
                     }
                 }
             } else {
@@ -48,7 +50,9 @@ public class SuperMarketPlusPlus {
                                     item.setQuality(item.getQuality() - 1);
                                 }
                             } else {
-                                item.setQuality(item.getQuality() - 2);
+                                if (item.getQuality() >= 2) {
+                                    item.setQuality(item.getQuality() - 2);
+                                }
                             }
                         }
                     } else {
