@@ -129,8 +129,26 @@ public class SuperMarketPlusPlusTest {
 		assertThat(itemGingerCake.getName(), equalTo("Ginger Cake"));
 		assertThat(itemGingerCake.getQuality(), equalTo(5));
 		assertThat(itemGingerCake.getSellIn(), equalTo(2));
-
-
 	}
+
+	@Test
+	public void testQualityAfterSellByDateDecrementeTwiceAsFast() {
+		List<Item> items = new ArrayList<>();
+		items.add(new Item("Chicken", 1, 4));
+		SuperMarketPlusPlus superMarketPlusPlus = new SuperMarketPlusPlus();
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+		superMarketPlusPlus.updateQuality(items);
+
+
+		Item chicken = items.get(0);
+		assertThat(chicken.getName(), equalTo("Chicken"));
+		assertThat(chicken.getQuality(), equalTo(0));
+		assertThat(chicken.getSellIn(), equalTo(-5));
+	}
+
 
 }
